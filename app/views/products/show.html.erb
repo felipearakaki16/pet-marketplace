@@ -1,0 +1,12 @@
+<h1>Details from: <%= @product.name %> </h1>
+
+
+<p><%= @product.name %></p>
+<p>Product announced on:<%= @product.created_at %></p>
+<p>Product updated on:<%= @product.updated_at %></p>
+
+mudar o id do usuário no produto
+<%= link_to "Buy product", product_path(user), method: :patch %>
+
+
+
