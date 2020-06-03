@@ -1,12 +1,18 @@
 <h1>Details from: <%= @product.name %> </h1>
 
 
-<p><%= @product.name %></p>
-<p>Product announced on:<%= @product.created_at %></p>
-<p>Product updated on:<%= @product.updated_at %></p>
 
-mudar o id do usuário no produto
-<%# <%= link_to "Buy product", product_path(user), method: :patch %> %>
+<p>Price: $<%= @product.price %></p>
+<p><%= @product.category %></p>
+<p>Announced by user: <%= @product.user.id %></p>
+<p>Published on: <%= @product.created_at %></p>
+<p>Updated on: <%= @product.updated_at %></p>
+
+
+<%= link_to "Buy product", root_path %>
+<br>
+<br>
+<%= link_to "Back to all products", root_path %>
 
 
 

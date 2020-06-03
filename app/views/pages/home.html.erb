@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Ketinhos</h1>
+
+
+
+
+<p><% @products.each do |product| %></p>
+  <div class="cards">
+    <br>
+    <br>
+    <p>Product: <%= product.name %></p>
+    <p>Price: $<%= product.price %></p>
+    <p>Announced by user: <%= product.user.id %></p>
+    <p>Announced on:<%= product.created_at %></p>
+    <%= link_to "View product", product_path(product.id) %>
+    <br>
+    <br>
+  </div>
+<p><% end %></p>
