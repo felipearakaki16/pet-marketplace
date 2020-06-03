@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :admin do 
     resources :users, only: [ :show ]
   end
-  resources :products, except: :destroy
+  resources :products, except: :destroy do
+  end
   resources :orders, only: %i(index show create update)
 end
