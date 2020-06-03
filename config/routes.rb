@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get "/components", to: "pages#components"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :admin do 
+    resources :users, only: [ :show ]
+  end
   resources :products
   resources :orders, only: %i(index show create destroy)
 end
