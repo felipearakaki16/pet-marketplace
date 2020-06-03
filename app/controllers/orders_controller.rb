@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i(show destroy)
+  before_action :set_order, only: %i(show update)
   def index
     @orders = Product.all
   end
@@ -17,13 +17,12 @@ class OrdersController < ApplicationController
     end
   end
 
-  def destroy
+  def update
     @product = @order.product
-    @product.user = current_user
+    @product.user = @order.user
+    @product.unavaiable!
     if @product.save
-      @order.destroy
-
-      redirect_to products_path
+      redirect_to root_path
     end
   end
 
