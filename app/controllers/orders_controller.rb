@@ -22,6 +22,8 @@ class OrdersController < ApplicationController
     @product.user = @order.user
     @product.unavaiable!
     if @product.save
+      @order.finished!.save
+
       redirect_to root_path
     end
   end
