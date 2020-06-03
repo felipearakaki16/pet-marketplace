@@ -3,13 +3,13 @@
 
 
 <p>Price: $<%= @product.price %></p>
-<p><%= @product.category %></p>
+<p><%= @product.tag_list %></p>
 <p>Announced by user: <%= @product.user.id %></p>
 <p>Published on: <%= @product.created_at %></p>
 <p>Updated on: <%= @product.updated_at %></p>
 
 
-<%= link_to "Buy product", root_path %>
+<%= link_to "Buy product", orders_path(product_id: @product.id), method: :post %>
 <br>
 <br>
 <%= link_to "Back to all products", root_path %>

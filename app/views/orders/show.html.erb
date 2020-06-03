@@ -1,0 +1,4 @@
+<h1><%= @order.product.name %></h1>
+<p>User id from the buyer: <%= @order.user.id %></p>
+<p>User id from the seller: <%= @order.product.user_id %></p>
+<%= link_to "Checkout", order_path(@order.id), method: :patch %>

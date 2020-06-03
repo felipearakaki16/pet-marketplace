@@ -5,4 +5,8 @@ class Product < ApplicationRecord
 
   validates :user, :name, :price, presence: true
   validates :name, uniqueness: true
+
+  def unavaiable!
+    self.avaiable = false
+  end
 end
