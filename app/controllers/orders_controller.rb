@@ -8,22 +8,26 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new
     @order.user = current_user
+    @order.product_id = params[:product_id]
+    @order.date = DateTime.now
     if @order.save
       redirect_to order_path(@order.id)
     end
   end
 
   def destroy
-    @order.destroy
+    @product = @order.product
+    @product.user = current_user
+    if @product.save
+      @order.destroy
+
+      redirect_to products_path
+    end
   end
 
   private
-
-  def order_params
-    params.require(:order).permit(:product_id)
-  end
 
   def set_order
     @order = Order.find(params[:id])
