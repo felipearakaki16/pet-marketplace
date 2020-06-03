@@ -6,6 +6,8 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @order = Order.new
+    @order.product = @product
   end
 
   def new
@@ -29,10 +31,6 @@ class ProductsController < ApplicationController
     @product.update(product_params)
 
     redirect_to product_path(@product.id)
-  end
-
-  def destroy
-    @product.destroy
   end
 
   private

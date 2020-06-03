@@ -3,6 +3,6 @@
 <%= simple_form_for [@user, @product] do |f| %>
   <%= f.input :name %>
   <%= f.input :price %>
-  <%# <%= f.association :category, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+  <%= f.input :tag_list, collection: %w(Dogs Cats Birds Reptiles Rodents) %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
