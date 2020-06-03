@@ -10,35 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_06_03_152006) do
-=======
 ActiveRecord::Schema.define(version: 2020_06_03_184609) do
->>>>>>> 83822cfc62e0534f130df9988cc0c1a03768c310
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-<<<<<<< HEAD
-=======
-  create_table "animals", force: :cascade do |t|
-    t.string "pet"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
->>>>>>> 83822cfc62e0534f130df9988cc0c1a03768c310
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
-=======
-    t.bigint "animal_id", null: false
-    t.index ["animal_id"], name: "index_categories_on_animal_id"
->>>>>>> 83822cfc62e0534f130df9988cc0c1a03768c310
-  end
-
+  
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "product_id", null: false

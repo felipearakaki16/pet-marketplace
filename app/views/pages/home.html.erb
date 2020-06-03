@@ -1,24 +1,25 @@
 
-<h1>Ketinhos</h1>
+<h1>Ketinhos Company</h1>
 
-
-
+<h2>Products available:</h2>
 <div class="container">
-<% @products.each do |product| %>
-  <div class="card" style="width: 18rem;">
-  <img src="https://i.pinimg.com/originals/c3/60/7a/c3607ad391a8bc5dae9e13bf76b48d62.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><%= product.name %></h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Price: $<%= product.price %></li>
-    <li class="list-group-item">Announced by user: <%= product.user.id %></li>
-    <li class="list-group-item">Announced on:<%= product.created_at %></li>
-  </ul>
-  <div class="card-body">
-    <%= link_to "View product", product_path(product.id), class: "card-link" %>
-    <a href="#" class="card-link">Another link</a>
-  </div>
+  <% @products.each do |product| %>
+    <% if product.user_id != current_user.id %>
+    <div class="card" style="width: 18rem;">
+    <img src="https://i.pinimg.com/originals/c3/60/7a/c3607ad391a8bc5dae9e13bf76b48d62.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= product.name %></h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Price: $<%= product.price %></li>
+      <li class="list-group-item">Announced by user: <%= product.user.id %></li>
+      <li class="list-group-item">Announced on:<%= product.created_at %></li>
+    </ul>
+    <div class="card-body">
+      <%= link_to "View product", product_path(product.id), class: "card-link" %>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+    <% end %>
+  <% end%>
 </div>
-<p><% end %></p>
-</div>
+  
