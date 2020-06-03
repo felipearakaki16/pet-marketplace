@@ -4,7 +4,7 @@
 <h2>Products available:</h2>
 <div class="container">
   <% @products.each do |product| %>
-    <% if product.user_id != current_user.id %>
+    <% if product.user != current_user %>
     <div class="card" style="width: 18rem;">
     <img src="https://i.pinimg.com/originals/c3/60/7a/c3607ad391a8bc5dae9e13bf76b48d62.jpg" class="card-img-top" alt="...">
     <div class="card-body">
