@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @products = Product.all
+    @products = Product.where(avaiable: true)
   end
 
   def components
