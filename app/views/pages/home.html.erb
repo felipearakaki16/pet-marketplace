@@ -1,19 +1,23 @@
 
-<h1>Ketinhos</h1>
-
-
-
+<h1>Ketinhos Company</h1>
+<br>
+<br>
+<br>
+<h2>Products available:</h2>
 
 <p><% @products.each do |product| %></p>
-  <div class="cards">
-    <br>
-    <br>
-    <p>Product: <%= product.name %></p>
-    <p>Price: $<%= product.price %></p>
-    <p>Announced by user: <%= product.user.id %></p>
-    <p>Announced on:<%= product.created_at %></p>
-    <%= link_to "View product", product_path(product.id) %>
-    <br>
-    <br>
-  </div>
+  <% if product.user_id == 1 %>
+    <div class="cards">
+      <br>
+      <br>
+      <p>Product: <%= product.name %></p>
+      <p>Price: $<%= product.price %></p>
+      <p>Announced by user: <%= product.user.id %></p>
+      <p>Announced on:<%= product.created_at %></p>
+      <%= link_to "View product", product_path(product.id) %>
+      <br>
+      <br>
+    </div>
+  <% else %>
+  <% end %>  
 <p><% end %></p>
