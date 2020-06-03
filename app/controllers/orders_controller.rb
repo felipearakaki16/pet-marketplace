@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i(:show destroy)
+  before_action :set_order, only: %i(show destroy)
   def index
     @orders = Product.all
   end
