@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   end
   resources :orders, only: %i(index show create update)
 
-  get '/user_products', to: 'pages#show_user'
+  get '/user_purchased', to: 'pages#user_purchased'
+  get '/user_announced', to: 'pages#user_announced'
 end

@@ -14,7 +14,20 @@ import "slick-carousel/slick/slick-theme.scss"
 //const imagePath = (name) => images(name, true)
 
 const init_slick = () => {
-  $('.slick-modal').slick()
+  $('.slick-modal').slick({
+    dots: true,
+    infinite: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+
+  $('.autoplay').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
 }
 
 export { init_slick };
