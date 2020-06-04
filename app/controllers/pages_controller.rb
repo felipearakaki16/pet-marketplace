@@ -7,9 +7,12 @@ class PagesController < ApplicationController
   def components
   end
 
-  def show_user
-    @products_sell = Product.where(user: current_user, avaiable: true)
+  def user_purchased
     @products_buy = Product.where(user: current_user, avaiable: false)
+  end
+
+  def user_announced
+    @products_sell = Product.where(user: current_user, avaiable: true)
   end
 
 end
