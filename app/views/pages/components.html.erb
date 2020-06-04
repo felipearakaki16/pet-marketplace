@@ -1,17 +1,23 @@
-<button class="btn btn-green">loggin</button>
-<button class="btn-venda_conosco">Venda Conosco</button>
-<button class="btn-ongs">Ong's</button>
-<button class="btn-buscar">Buscar</button>
-<button class=“btn-venda_conosco”><i class="fas fa-dog"></i>Compre Aqui</button>
-<button><i class="fas fa-cat">Gato</i></button>
-<div class="card-product">
-  <div class="nav-card">
-  <%= image_tag  "logo", class="avatar" %>
-  <p class="username">Pafûncio</p>
-  <p class="product-name">Ração Pedigree</p>
-  </div>
-    <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804" %>
-  <div card="price">
-    <p>R$30,00</p>
+<div class="container">
+  <button class="btn btn-green">loggin</button>
+  <button class="btn-venda_conosco">Venda Conosco</button>
+  <button class="btn-ongs">Ong's</button>
+  <button class="btn-buscar">Buscar</button>
+  <button class=“btn-venda_conosco”><i class="fas fa-dog"></i>Compre Aqui</button>
+  <button><i class="fas fa-cat">Gato</i></button>
+
+
+  <div class="card-product">
+    <div class="nav-card">
+      <div class="card-details">
+        <p class="product-name">Ração Pedigree</p>
+        <p class="from">from <em class="username">Pafûncio</em></p>
+      </div>
+    </div>
+      <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
+      class: "product-img" %>
+      <div class="price">
+        <p>R$30,00</p>
+      </div>
   </div>
 </div>
