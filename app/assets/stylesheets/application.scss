@@ -1,3 +1,8 @@
+/*
+*= require owl.carousel
+*= require owl.theme
+*/
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -7,6 +12,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'owl.carousel/dist/assets/owl.carousel.css';
 
 // Your CSS partials
 @import "components/index";
