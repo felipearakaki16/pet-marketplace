@@ -1,25 +1,15 @@
-
-<h1>Ketinhos Company</h1>
-
-<h2>Products available:</h2>
-<div class="container">
-  <% @products.each do |product| %>
-    <% if product.user != current_user %>
-    <div class="card" style="width: 18rem;">
-    <img src="https://i.pinimg.com/originals/c3/60/7a/c3607ad391a8bc5dae9e13bf76b48d62.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"><%= product.name %></h5>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Price: $<%= product.price %></li>
-      <li class="list-group-item">Announced by user: <%= product.user.id %></li>
-      <li class="list-group-item">Announced on:<%= product.created_at %></li>
-    </ul>
-    <div class="card-body">
-      <%= link_to "View product", product_path(product.id), class: "card-link" %>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-    <% end %>
-  <% end%>
+<div class="slick-modal">
+  <%= image_tag  "https://source.unsplash.com/1600x500/?cat", class: "d-block w-100" %>
+  <%= image_tag  "https://source.unsplash.com/1600x500/?dog", class: "d-block w-100" %>
+  <%= image_tag  "https://source.unsplash.com/1600x500/?bunny", class: "d-block w-100" %>
 </div>
-  
+<div class="inline">
+  <h3>Categorias em destaque</h3>
+  <div>
+  <a href="/products/dog" class="btn-category"><%= image_tag  "dog" %></a>
+  <a href="/products/cat" class="btn-category"><%= image_tag  "cat" %></a>
+  <a href="/products/fish" class="btn-category"><%= image_tag  "fish" %></a>
+  <a href="/products/rodent" class="btn-category"><%= image_tag  "rabbit" %></a>
+  </div>
+</div>
+

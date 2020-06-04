@@ -3,6 +3,7 @@
 <%= simple_form_for [@user, @product] do |f| %>
   <%= f.input :name %>
   <%= f.input :price %>
-  <%= f.input :tag_list, collection: %w(Dogs Cats Birds Reptiles Rodents) %>
+  <%= f.input :tag_list, collection: %w(Dogs Cats Fishes Birds Reptiles Rodents) %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
