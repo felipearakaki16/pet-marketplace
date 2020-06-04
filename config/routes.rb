@@ -4,9 +4,6 @@ Rails.application.routes.draw do
 
   get "/components", to: "pages#components"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  namespace :admin do 
-    resources :users, only: [ :show ]
-  end
   resources :products, except: :destroy do
     collection do
       get :dog
@@ -16,4 +13,6 @@ Rails.application.routes.draw do
     end
   end
   resources :orders, only: %i(index show create update)
+
+  get '/user_products', to: 'pages#show_user'
 end
