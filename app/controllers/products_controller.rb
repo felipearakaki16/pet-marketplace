@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i(show edit update destroy)
   skip_before_action :authenticate_user!, only: %i(index show)
+
   def index
-    @products = Product.all
+    @products = Product.where(avaiable: true)
     
   end
 
@@ -37,7 +38,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :category, :price)
+    params.require(:product).permit(:name, :category, :price, photos: [])
   end
 
   def set_product

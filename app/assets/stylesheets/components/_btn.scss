@@ -50,11 +50,20 @@ text-transform: uppercase;
 width: 100%;
 }
 
-.btn-cachorro{
-
+.btn-chat{
+  color: black;
+  background: #b1b493;
+  border-radius: 5px;
+  padding: 10px 15px;
 }
 
-
+.btn-category {
+  background: #ffcb74;
+  border-radius: 50%;
+  img {
+    width: 90px;
+  }
+}
 
 
 
