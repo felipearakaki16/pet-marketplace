@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+puts 'Creating 30 fake users...'
+30.times do
+  user = User.new(
+    name: Faker::Name.first_name ,
+    email: Faker::Internet.email,
+    password: "123456"
+  )
+  user.save!
+end
+puts 'Finished users!'
+
+puts 'Creating 10 fake products...'
+10.times do
+  product = Product.new(
+    name: ['Coleira', 'Aquário', 'Bolinha', 'Chicletinho', 'Mantinha', 'Arranhador', 'Cobertor', 'Petisco', 'Ração', 'Remédio', 'Bebedouro'].sample,
+    price: rand(1..99),
+    description: "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, c",
+    user_id: rand(1..30),
+    brand:,
+    tag_list: ['Dogs', 'Cats', 'Fishes', 'Birds'].sample
+  )
+  product.save!
+end
+puts 'Finished products!'
