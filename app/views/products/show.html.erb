@@ -38,5 +38,32 @@
 <br>
 <%= link_to "Back to all products", root_path %>
 
+<div class="card-show row justify-content-around">
+  <%= cl_image_tag @product.photos.first.key, class: "product-img-show col-5" %>
+  <div class="purchase-info col-5">
+    <div class="show-content">
+      <h2 class="product-name-show"><%= @product.name %></h2>
+      <div class="details-product-show">
+        <p>Marca: </p>
+        <p>Código do produto: <%= @product.id %></p>
+      </div>
+      <h2 class="price-show">R$ <%= @product.price %></h2>
+      <div class="payment">
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-stripe"></i>
+      </div>
+      <div class="seller my-2">
+        <%= image_tag  "logo", class: "avatar-seller" %>
+        <p>Vendido por <a href="#"><%= @product.user.name %></a></p>
+      </div>
+      <div class="delivery-show my-2">
+        <i class="fas fa-truck"></i>
+        <p>Entrega via Sedexi</p>
+      </div>
+    </div>
+    <a href="#" class="btn-light-green">Buy product</a>
+  </div>
+</div>
 
 
