@@ -1,0 +1,12 @@
+<h1>My purchased products: </h1>
+<p><% @products_buy.each do |product| %></p>
+  <br>
+  <br>
+  <p>Product: <%= product.name %></p>
+  <p>Price: $<%= product.price %></p>
+  <p>Avaiable: <%= product.avaiable %></p>
+  <p>User id: <%= product.user_id %></p>
+  <br>
+  <br>
+<p><% end %></p>
+
