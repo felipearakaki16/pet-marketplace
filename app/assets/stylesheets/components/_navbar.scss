@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  position: fixed;
+  position: relative;
   top: 0;
   z-index: 1000;
   width: 100vw;
@@ -17,7 +17,7 @@
   height: 60px;
 
 }
-.navbar-perfil {
-  margin-bottom: 85px;
+// .navbar-perfil {
+//   margin-bottom: 85px;
 
-}
+// }
