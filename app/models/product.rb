@@ -5,6 +5,7 @@ class Product < ApplicationRecord
   has_many_attached :photos
 
   validates :user, :name, :price, presence: true
+  validates :price, numericality: { greater_than: 0 }
 
   def unavaiable!
     self.avaiable = false
