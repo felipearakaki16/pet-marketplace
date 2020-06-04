@@ -7,17 +7,23 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <div class="navbar-perfil"></div>
-      <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'shared/footer' %>
+
+    <div id="page-container">
+      <%= render 'shared/navbar' %>
+      <div class="navbar-perfil"></div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <div id="content-wrap">
+        <%= yield %>
+      </div>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

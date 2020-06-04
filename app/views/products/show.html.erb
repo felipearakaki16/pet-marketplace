@@ -26,11 +26,12 @@
 <p>Announced by user: <%= @product.user.id %></p>
 <p>Published on: <%= @product.created_at %></p>
 <p>Updated on: <%= @product.updated_at %></p>
-<% if @product.avaiable %>
+<% if @product.avaiable && @product.user != current_user %>
   <%= link_to "Buy product",
   orders_path(product_id: @product.id),
   method: :post %>
-<% else %>
+<% end %>
+<% unless @product.avaiable %>
   <h3>Indisponível</h3>
 <% end %>
 <br>
