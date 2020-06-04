@@ -1,38 +1,15 @@
-<div class="row">
-  <div id="carouselExampleIndicators" class="carousel slide col-12" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <%= image_tag  "https://source.unsplash.com/1600x500/?cat", class: "d-block w-100" %>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag  "https://source.unsplash.com/1600x500/?dog", class: "d-block w-100" %>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag  "https://source.unsplash.com/1600x500/?bunny", class: "d-block w-100" %>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+<div class="slick-modal">
+  <%= image_tag  "https://source.unsplash.com/1600x500/?cat", class: "d-block w-100" %>
+  <%= image_tag  "https://source.unsplash.com/1600x500/?dog", class: "d-block w-100" %>
+  <%= image_tag  "https://source.unsplash.com/1600x500/?bunny", class: "d-block w-100" %>
+</div>
+<div class="inline">
+  <h3>Categorias em destaque</h3>
+  <div>
+  <a href="/products/dog" class="btn-category"><%= image_tag  "dog" %></a>
+  <a href="/products/cat" class="btn-category"><%= image_tag  "cat" %></a>
+  <a href="/products/fish" class="btn-category"><%= image_tag  "fish" %></a>
+  <a href="/products/rodent" class="btn-category"><%= image_tag  "rabbit" %></a>
   </div>
 </div>
-  <div class="inline">
-    <h3>Categorias em destaque</h3>
-    <div>
-    <a href="#" class="btn-category"><%= image_tag  "dog" %></a>
-    <a href="#" class="btn-category"><%= image_tag  "cat" %></a>
-    <a href="#" class="btn-category"><%= image_tag  "fish" %></a>
-    <a href="#" class="btn-category"><%= image_tag  "rabbit" %></a>
-    </div>
-  </div>
-  
+

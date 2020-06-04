@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     resources :users, only: [ :show ]
   end
   resources :products, except: :destroy do
+    collection do
+      get :dog
+      get :cat
+      get :fish
+      get :rodent
+    end
   end
   resources :orders, only: %i(index show create update)
 end

@@ -35,6 +35,22 @@ class ProductsController < ApplicationController
     redirect_to product_path(@product.id)
   end
 
+  def dog
+    @products = Product.tagged_with("Dogs")
+  end
+
+  def cat
+    @products = Product.tagged_with("Cats")
+  end
+
+  def fish
+    @products = Product.tagged_with("Fishes")
+  end
+
+  def rodent
+    @products = Product.tagged_with("Rodents")
+  end
+
   private
 
   def product_params
