@@ -1,14 +1,71 @@
-require 'faker'
+puts 'Creating 10 fake users...'
 
-puts 'Creating 30 fake users...'
-30.times do
   user = User.new(
-    name: Faker::Name.first_name ,
-    email: Faker::Internet.email,
+    name: ['Maria'],
+    email: ['Maria@teste.com'],
     password: "123456"
   )
+  
+  user = User.new(
+    name: ['Marco Antônio'],
+    email: ['MarcoAntônio@teste.com'],
+    password: "123456"
+  )
+
+  user = User.new(
+    name: ['Joaquim'],
+    email: ['Joaquim@teste.com'],
+    password: "123456"
+  )
+
+  user = User.new(
+    name: ['Eduardo'],
+    email: ['Eduardo@teste.com'],
+    password: "123456"
+  )
+
+  user = User.new(
+    name: ['Ricardo'],
+    email: ['Ricardo@teste.com'],
+    password: "123456"
+  )
+
+  user = User.new(
+    name: ['Mara'],
+    email: ['Mara@teste.com'],
+    password: "123456"
+  )
+  
+  user = User.new(
+    name: ['Renata'],
+    email: ['Renata@teste.com'],
+    password: "123456"
+  )
+
+  user = User.new(
+    name: ['Arlinda'],
+    email: ['Arlinda@teste.com'],
+    password: "123456"
+  )
+
+  user = User.new(
+    name: ['Eugênia'],
+    email: ['Eugênia@teste.com'],
+    password: "123456"
+  )
+  
+  
+  
+  
+  
   user.save!
-end
+
+
+
+
+
+
+
 puts 'Finished users!'
 
 puts 'Creating 10 fake products...'
