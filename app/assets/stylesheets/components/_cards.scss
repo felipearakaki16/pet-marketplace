@@ -30,7 +30,7 @@
   .avatar {
     width: 50px;
   }
-  .product-img {
+  .product-img-card {
     width: 300px;
     position: absolute;
   }
@@ -59,12 +59,57 @@
     .from {
       font-size: 14px;
     }
-    .product-name {
+    .product-name-card {
       font-size: 24px;
     }
     em.username {
       font-style: normal;
       font-size: 18px;
+    }
+  }
+}
+
+.card-show {
+  background: blue;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+  .product-img-show {
+    margin: 15px;
+  }
+  .purchase-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .show-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .details-product-show {
+    display: flex;
+    justify-content: space-between;
+  }
+  .payment {
+
+  }
+  .delivery-show {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0 0 0 10px;
+    }
+  }
+  .seller {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0 0 0 10px;
+    }
+    .avatar-seller {
+      width: 40px;
+      height: 40px;
     }
   }
 }
