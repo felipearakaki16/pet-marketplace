@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   end
 
   def user_announced
-    @products_sell = Product.where(user: current_user, avaiable: true)
+    @products = Product.where(user: current_user, avaiable: true)
   end
 
 end
