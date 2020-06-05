@@ -26,6 +26,8 @@
 
 <div class="cards-home">
   <% @products.each do |product| %>
+  <% if product %>
+
     <%= link_to  product_path(product.id) do %>
       <div class="card-product">
         <div class="nav-card">
@@ -43,6 +45,9 @@
             <p>R$<%= product.price %></p>
           </div>
       </div>
-    <% end %>
+      <% end %>
+  <% else %>
+  <h3>sem produtos</h3>
+  <% end %>
   <% end %>
 </div>
