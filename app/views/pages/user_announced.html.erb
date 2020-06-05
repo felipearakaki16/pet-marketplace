@@ -1,7 +1,1 @@
-<h1>My announced products: </h1>
-<p><% @products_sell.each do |product| %></p>
-  <br>
-  <br>
-  <p>Product: <%= product.name %></p>
-  <p>Price: $<%= product.price %></p>
-<p><% end %></p>
+<%= render '../products/index-products', products: @products %>
