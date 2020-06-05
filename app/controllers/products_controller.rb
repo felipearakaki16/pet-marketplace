@@ -53,6 +53,14 @@ class ProductsController < ApplicationController
     @products = Product.tagged_with("Rodents").where(avaiable: true)
   end
 
+  def bird
+    @products = Product.tagged_with("Birds").where(avaiable: true)
+  end
+
+  def reptile
+    @products = Product.tagged_with("Reptiles").where(avaiable: true)
+  end
+
   private
 
   def product_params

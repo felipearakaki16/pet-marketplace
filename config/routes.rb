@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       get :cat
       get :fish
       get :rodent
+      get :bird
+      get :reptile
     end
   end
   resources :orders, only: %i(index show create update)
