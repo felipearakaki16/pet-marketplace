@@ -5,9 +5,12 @@
   margin-bottom: 15px;
   align-items: center;
   justify-content: space-around;
-  background-color: #a3f7bf;
+  background-color: #61d4b3;
 }
 .list-ong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   li {
     list-style: none;
   }
