@@ -24,15 +24,20 @@
   overflow: hidden;
   background-color: #969696;
   border-radius: 5px;
-  width: 300px;
   height: 300px;
   margin: 0 20px;
+  color: black;
   .avatar {
     width: 50px;
   }
   .product-img-card {
     width: 300px;
     position: absolute;
+    filter: brightness(0.8);
+    transition: 0.3s;
+    &:hover {
+      filter: brightness(1);
+    }
   }
   .price {
     background-color:  rgba(190, 190, 190, 0.9);
