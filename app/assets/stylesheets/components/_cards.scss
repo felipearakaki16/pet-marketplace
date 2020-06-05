@@ -24,15 +24,20 @@
   overflow: hidden;
   background-color: #969696;
   border-radius: 5px;
-  width: 300px;
   height: 300px;
   margin: 0 20px;
+  color: black;
   .avatar {
     width: 50px;
   }
-  .product-img {
+  .product-img-card {
     width: 300px;
     position: absolute;
+    filter: brightness(0.8);
+    transition: 0.3s;
+    &:hover {
+      filter: brightness(1);
+    }
   }
   .price {
     background-color:  rgba(190, 190, 190, 0.9);
@@ -59,7 +64,7 @@
     .from {
       font-size: 14px;
     }
-    .product-name {
+    .product-name-card {
       font-size: 24px;
     }
     em.username {
@@ -67,4 +72,86 @@
       font-size: 18px;
     }
   }
+}
+
+.card-show {
+  margin: 0 auto;
+  background: rgba(255, 203, 116, 0.7);
+  width: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+  .product-img-show {
+    margin: 15px;
+  }
+  .purchase-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .show-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .details-product-show {
+    display: flex;
+    justify-content: space-between;
+  }
+  .payment {
+    font-size: 24px;
+    color: #4F8A8B;
+  }
+  .delivery-show {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0 0 0 10px;
+    }
+  }
+  .seller {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0 0 0 10px;
+    }
+    .avatar-seller {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.card-item {
+  overflow: hidden;
+  border-radius: 4px;
+  height: 8rem;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-item img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-item h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-item p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-item .card-item-infos {
+  padding: 16px;
 }

@@ -9,6 +9,10 @@ class Order < ApplicationRecord
     self.progress == "Em andamento"
   end
 
+  def finished?
+    self.progress == "Finalizado"
+  end
+
   def finished!
     self.progress = "Finalizado"
   end

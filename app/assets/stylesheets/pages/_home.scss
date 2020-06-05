@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.extra-content {
+  height: 13rem;
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fbc687;
+}
+.list-ong {
+  li {
+    list-style: none;
+  }
+  li a {
+    color: #4F8A8B;
+    transition: 0.3s;
+    &:hover {
+      text-decoration: none;
+      color: rgb(69, 122, 122);
+    }
+  }
+}
+
+.categories {
+  text-align: center;
+}
+.btn-category {
+  margin: 0 20px;
+}

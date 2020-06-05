@@ -38,19 +38,19 @@ class ProductsController < ApplicationController
   end
 
   def dog
-    @products = Product.tagged_with("Dogs")
+    @products = Product.tagged_with("Dogs").where(avaiable: true)
   end
 
   def cat
-    @products = Product.tagged_with("Cats")
+    @products = Product.tagged_with("Cats").where(avaiable: true)
   end
 
   def fish
-    @products = Product.tagged_with("Fishes")
+    @products = Product.tagged_with("Fishes").where(avaiable: true)
   end
 
   def rodent
-    @products = Product.tagged_with("Rodents")
+    @products = Product.tagged_with("Rodents").where(avaiable: true)
   end
 
   private
