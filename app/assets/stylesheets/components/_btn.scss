@@ -22,14 +22,21 @@ box-shadow:0 5px 0 #3C9D9B;
   top:5px;
 box-shadow: none
 }
-.btn-venda_conosco{
+.btn-light-green{
   font-family: sans-serif;
-  font-size:14px;
-  border:1px;
-  padding:10px;
+  font-size: 24px;
+  border: 1px;
+  padding: 5px 10px;
   cursor: pointer;
-  background-color:darkseagreen;
+  background-color: darkseagreen;
   border-radius: 3px;
+  text-align: center;
+  color: #4F8A8B;
+
+  &:hover {
+    color: rgba(79, 138, 139, 0.76);
+    text-decoration: none;
+  }
 }
 .btn-buscar {
   box-sizing: inherit;

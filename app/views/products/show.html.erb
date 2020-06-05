@@ -1,42 +1,43 @@
-<h1>Details from: <%= @product.name %> </h1>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <% @product.photos.each do |photo| %>
-      <% if @product.photos.first == photo %>
-        <div class="carousel-item active">
-      <% else %>
-        <div class="carousel-item">
-      <% end %>
-        <%= cl_image_tag photo.key, class: "d-block w-100" %>
+<div class="card-show row justify-content-around my-5">
+  <% if @product.photos.attached? %>
+    <%= cl_image_tag @product.photos.first.key, class: "product-img-show col-5" %>
+  <% else %>
+    <%= cl_image_tag("te2dj0lrofc7oo8m1xgb.jpg", class: "product-img-show col-5") %>
+  <% end %>
+  <div class="purchase-info col-5">
+    <div class="show-content">
+      <h2 class="product-name-show"><%= @product.name %></h2>
+      <div class="details-product-show">
+        <p>Marca: <%= @product.brand %></p>
+        <p>Código do produto: <%= @product.id %></p>
       </div>
+      <h2 class="price-show">R$ <%= @product.price %></h2>
+      <div class="payment">
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-stripe"></i>
+      </div>
+      <div class="seller my-2">
+        <% if @product.user.photo.attached? %>
+          <%= cl_image_tag  @product.user.photo.key, class: "avatar-seller" %>
+        <% else %>
+          <%= cl_image_tag("wcvhztmdjhwkhnelufkp.png", class: "avatar-seller") %>
+        <% end %>
+        <p>Vendido por <a href="#"><%= @product.user.name %></a></p>
+      </div>
+      <div class="delivery-show my-2">
+        <i class="fas fa-truck"></i>
+        <p>Entrega via Sedexi</p>
+      </div>
+    </div>
+    <% if @product.avaiable && @product.user != current_user %>
+      <%= link_to "Buy product",
+      orders_path(product_id: @product.id),
+      method: :post,
+      class: "btn-light-green" %>
+    <% end %>
+    <% unless @product.avaiable %>
+      <h3>Indisponível</h3>
     <% end %>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
-
-<p>Price: $<%= @product.price %></p>
-<p>Tag: <%= @product.tag_list %></p>
-<p>Announced by: <%= @product.user.name %></p>
-<p>Published on: <%= @product.created_at %></p>
-<p>Updated on: <%= @product.updated_at %></p>
-<% if @product.avaiable && @product.user != current_user %>
-  <%= link_to "Buy product",
-  orders_path(product_id: @product.id),
-  method: :post %>
-<% end %>
-<% unless @product.avaiable %>
-  <h3>Indisponível</h3>
-<% end %>
-<br>
-<br>
-<%= link_to "Back to all products", root_path %>
-
-
-)
