@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar-lewagon">
   <div class="domain">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "ketinhos.png", class:"perfil" %>
@@ -20,14 +20,6 @@
 
 
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%# <%= link_to "Messages", "#", class: "nav-link" %>
-          <%# <%= link_to "Add new product", "/products/new", class: "nav-link" %>
-          <%# <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        </li>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, width: 80, height: 80, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -51,4 +43,30 @@
       <% end %>
     </ul>
   </div>
+</div>
+<div class="nav-options">
+  <ul class="menu">
+    <li>
+      <a href="#">Parent Link</a>
+      
+      <ul>
+        <li><a href="#">Child Link</a></li>
+        <li><a href="#">Child Link</a></li>
+        <li><a href="#">Child Link</a></li>
+        <li><a href="#">Child Link</a></li>
+      </ul>
+    </li>
+  </ul>
+  <%
+=begin%>
+ <div class="dropdown">
+    <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown"></i>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div> 
+<%
+=end%>
 </div>
