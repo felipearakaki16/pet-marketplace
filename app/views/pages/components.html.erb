@@ -3,21 +3,52 @@
   <button class="btn-venda_conosco">Venda Conosco</button>
   <button class="btn-ongs">Ong's</button>
   <button class="btn-buscar">Buscar</button>
-  <button class=“btn-venda_conosco”><i class="fas fa-dog"></i>Compre Aqui</button>
+  <button class=“btn-light-green”><i class="fas fa-dog"></i>Compre Aqui</button>
   <button><i class="fas fa-cat">Gato</i></button>
 
 
   <div class="card-product">
     <div class="nav-card">
       <div class="card-details">
-        <p class="product-name">Ração Pedigree</p>
+        <p class="product-name-card">Ração Pedigree</p>
         <p class="from">from <em class="username">Pafûncio</em></p>
       </div>
     </div>
       <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
-      class: "product-img" %>
+      class: "product-img-card" %>
       <div class="price">
         <p>R$30,00</p>
       </div>
   </div>
+
+
+  <div class="card-show row justify-content-around">
+    <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
+    class: "product-img-show col-5" %>
+    <div class="purchase-info col-5">
+      <div class="show-content">
+        <h2 class="product-name-show">Nome do produto</h2>
+        <div class="details-product-show">
+          <p>Marca: Pedigree</p>
+          <p>Código do produto: 1</p>
+        </div>
+        <h2 class="price-show">R$ 100,00</h2>
+        <div class="payment">
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-stripe"></i>
+        </div>
+        <div class="seller my-2">
+          <%= image_tag  "logo", class: "avatar-seller" %>
+          <p>Vendido por <a href="#">Username</a></p>
+        </div>
+        <div class="delivery-show my-2">
+          <i class="fas fa-truck"></i>
+          <p>Entrega via Sedexi</p>
+        </div>
+      </div>
+      <a href="#" class="btn-light-green">Buy product</a>
+    </div>
+  </div>
+
 </div>

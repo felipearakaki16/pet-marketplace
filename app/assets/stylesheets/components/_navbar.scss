@@ -1,13 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-
+  position: relative;
   background: #cee397;
-
-  position: fixed;
   top: 0;
   z-index: 1000;
-  width: 100vw;
-
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,14 +14,9 @@
 .perfil {
   width: 60px;
   height: 60px;
-
 }
-.navbar-perfil {
-  margin-bottom: 85px;
 
-
-}
-.title{
+.title {
   color:#698474;
   font-family: 'Architects Daughter', cursive;
 }
