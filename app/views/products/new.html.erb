@@ -4,6 +4,7 @@
   <%= simple_form_for [@user, @product] do |f| %>
     <%= f.input :name %>
     <%= f.input :price %>
+    <%= f.input :brand %>
     <%= f.input :description %>
     <%= f.input :tag_list, collection: %w(Dogs Cats Fishes Birds Reptiles Rodents) %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>

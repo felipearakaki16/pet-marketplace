@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+
     @order = Order.new
     @order.product = @product
   end
@@ -17,6 +18,7 @@ class ProductsController < ApplicationController
   end
 
   def create
+    
     @product = Product.new(product_params)
     @product.user = current_user
     if @product.save
@@ -54,7 +56,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :tag_list, :price, photos: [])
+    params.require(:product).permit(:name, :description, :brand, :tag_list, :price, photos: [])
   end
 
   def set_product
