@@ -11,7 +11,8 @@
         <h2><%= product.name %></h2>
         <p><%= product.description %></p>
         <p>Código do produto: <%= product.id %></p>
-        <p>Código do pedido: <%= Order.where(progress: "Finalizado").where(product_id: product.id).first.id %></p>
+        <p>Código da compra: <%= product.orders.where(progress: "Finalizado").first.id %></p>
+        <p>Data da compra: <%= product.orders.where(progress: "Finalizado").first.date.strftime("%A, %d of %B in %Y, %H:%M h") %></p>
       </div>
     </div>
   <p><% end %></p>
