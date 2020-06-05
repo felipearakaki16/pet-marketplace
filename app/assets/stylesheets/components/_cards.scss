@@ -25,8 +25,8 @@
   background-color: #969696;
   border-radius: 5px;
   height: 300px;
-  margin: 0 20px;
   color: black;
+  padding: 0;
   .avatar {
     width: 50px;
   }
@@ -86,7 +86,8 @@
   .purchase-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 15px 0;
   }
   .show-content {
     padding: 10px;
@@ -122,12 +123,21 @@
   }
 }
 
+.card-desc {
+  margin: 0 auto;
+  background: rgba(255, 203, 116, 0.7);
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 .card-item {
   overflow: hidden;
   border-radius: 4px;
   height: 8rem;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
 }
