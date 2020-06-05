@@ -7,7 +7,7 @@
   </div>
   <div class="box-search">
     <%= simple_form_for :search, url: root_path, method: :get, :html=> { class: "d-flex align-items-center search-form-control mr-5", id: "search-form" } do |f| %>
-      <input class="form-search-nav string required" type="text" name="search[query]" id="search_query" placeholder="Procurando por..."/>
+      <input class="form-search-nav string required" type="text" name="search[query]" id="search_query" placeholder="Searching for..."/>
       <%= link_to  "/#", type: "submit", class: "btn-search ml-2" do %>
         <i class="fas fa-search"></i>
       <% end %>
@@ -25,18 +25,17 @@
            <%= cl_image_tag("wcvhztmdjhwkhnelufkp.png", width: 80, height: 80, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Todos produtos", products_path, class: "dropdown-item" %>
-            <%= link_to "Novo produto", "/products/new", class: "dropdown-item" %>
-            <%= link_to "Minhas compras", user_purchased_path, class: "dropdown-item" %>
-            <%= link_to "Meus anúncios", user_announced_path, class: "dropdown-item" %>
-            <%= link_to "Editar conta", edit_user_registration_path, class: "dropdown-item" %>
-            <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to "New product", "/products/new", class: "dropdown-item" %>
+            <%= link_to "Your orders", user_purchased_path, class: "dropdown-item" %>
+            <%= link_to "Your sales", user_announced_path, class: "dropdown-item" %>
+            <%= link_to "Edit account", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Entrar", new_user_session_path, class: "btn btn-green" %>
-          <%= link_to "Cadastrar", new_user_registration_path, class: "btn btn-green" %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-green" %>
+          <%= link_to "Sing up", new_user_registration_path, class: "btn btn-green" %>
         </li>
       <% end %>
     </ul>
@@ -45,26 +44,17 @@
 <div class="nav-options">
   <ul class="menu">
     <li>
-      <a href="#">Parent Link</a>
+      <a href="#"><i class="fas fa-bars"></i></a>
       
-      <ul>
-        <li><a href="#">Child Link</a></li>
-        <li><a href="#">Child Link</a></li>
-        <li><a href="#">Child Link</a></li>
-        <li><a href="#">Child Link</a></li>
+      <ul class="options">
+        <li><%= link_to "Products", products_path %></li>
+        <li><%= link_to "Dog", dog_products_path %></li>
+        <li><%= link_to "Cat", cat_products_path %></li>
+        <li><%= link_to "Fish", fish_products_path %></li>
+        <li><%= link_to "Bird", bird_products_path %></li>
+        <li><%= link_to "Rodent", rodent_products_path %></li>
+        <li><%= link_to "Reptile", reptile_products_path %></li>
       </ul>
     </li>
   </ul>
-  <%
-=begin%>
- <div class="dropdown">
-    <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown"></i>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-  </div> 
-<%
-=end%>
 </div>

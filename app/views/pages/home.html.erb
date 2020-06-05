@@ -1,12 +1,12 @@
 <div class="slick-modal">
-  <img src="https://source.unsplash.com/1600x500/?cat" class="d-block">
-  <img src="https://source.unsplash.com/1600x500/?dog" class="d-block">
-  <img src="https://source.unsplash.com/1600x500/?bunny" class="d-block">
+  <%= image_tag  "https://source.unsplash.com/1600x500/?cat", class: "d-block" %>
+  <%= image_tag  "https://source.unsplash.com/1600x500/?dog", class: "d-block" %>
+  <%= image_tag  "https://source.unsplash.com/1600x500/?bunny", class: "d-block" %>
 </div>
 
 <div class="extra-content">
   <div class="categories">
-    <h3>Categorias em destaque</h3>
+    <h3>Popular categories</h3>
     <div>
       <a href="/products/dog" class="btn-category"><%= image_tag  "dog.svg", alt: "Dog" %></a>
       <a href="/products/cat" class="btn-category"><%= image_tag  "cat.svg", alt: "Cat" %></a>
@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="list-ong">
-    <h4>Doe para uma ONG</h4>
+    <h4>Donate</h4>
     <ul>
       <li><a href="http://www.caosemdono.com.br/doacoes/">Cão sem dono</a></li>
       <li><a href="http://amigosdesaofrancisco.com.br/ajuda-financeira">Amigos de São Francisco</a></li>
@@ -39,7 +39,7 @@
           <% if product.photos.attached? %>
             <%= cl_image_tag product.photos.first.key, class: "product-img-card", width: 300, height: 300 %>
           <% else %>
-            <%= cl_image_tag("te2dj0lrofc7oo8m1xgb.jpg", class: "product-img-card", width: 300, height: 300) %>
+            <%= cl_image_tag("pepe_gk9cte.jpg", class: "product-img-card", width: 300, height: 300) %>
           <% end %>
           <div class="price">
             <p>R$<%= product.price %></p>
