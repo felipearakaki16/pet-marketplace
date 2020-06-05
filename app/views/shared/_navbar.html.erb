@@ -39,7 +39,7 @@
             <%= link_to "Add new product", "/products/new", class: "dropdown-item" %>
             <%= link_to "My purchased products", user_purchased_path, class: "dropdown-item" %>
             <%= link_to "My announced products", user_announced_path, class: "dropdown-item" %>
-            <%# <%= link_to "Search products", "#", class: "dropdown-item" %>
+            <%= link_to "Edit my account", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
