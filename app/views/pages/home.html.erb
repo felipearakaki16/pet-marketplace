@@ -13,82 +13,24 @@
   </div>
 </div>
 <div class="cards-home">
-  <div class="card-product">
-    <div class="nav-card">
-      <div class="card-details">
-        <p class="product-name">Ração Pedigree</p>
-        <p class="from">from <em class="username">Pafûncio</em></p>
+  <% @products.each do |product| %>
+    <%= link_to  product_path(product.id) do %>
+      <div class="card-product">
+        <div class="nav-card">
+          <div class="card-details">
+            <p class="product-name"><%= product.name %></p>
+            <p class="from">from <em class="username"><%= product.user.name %></em></p>
+          </div>
+        </div>
+          <% if product.photos.attached? %>
+            <%= cl_image_tag product.photos.first.key, class: "product-img-card", width: 300, height: 300 %>
+          <% else %>
+            <%= cl_image_tag("te2dj0lrofc7oo8m1xgb.jpg", class: "product-img-card", width: 300, height: 300) %>
+          <% end %>
+          <div class="price">
+            <p>R$<%= product.price %></p>
+          </div>
       </div>
-    </div>
-      <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
-      class: "product-img" %>
-      <div class="price">
-        <p>R$30,00</p>
-      </div>
-  </div>
-  <div class="card-product">
-    <div class="nav-card">
-      <div class="card-details">
-        <p class="product-name">Ração Pedigree</p>
-        <p class="from">from <em class="username">Pafûncio</em></p>
-      </div>
-    </div>
-      <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
-      class: "product-img" %>
-      <div class="price">
-        <p>R$30,00</p>
-      </div>
-  </div>
-  <div class="card-product">
-    <div class="nav-card">
-      <div class="card-details">
-        <p class="product-name">Ração Pedigree</p>
-        <p class="from">from <em class="username">Pafûncio</em></p>
-      </div>
-    </div>
-      <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
-      class: "product-img" %>
-      <div class="price">
-        <p>R$30,00</p>
-      </div>
-  </div>
-  <div class="card-product">
-    <div class="nav-card">
-      <div class="card-details">
-        <p class="product-name">Ração Pedigree</p>
-        <p class="from">from <em class="username">Pafûncio</em></p>
-      </div>
-    </div>
-      <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
-      class: "product-img" %>
-      <div class="price">
-        <p>R$30,00</p>
-      </div>
-  </div>
-  <div class="card-product">
-    <div class="nav-card">
-      <div class="card-details">
-        <p class="product-name">Ração Pedigree</p>
-        <p class="from">from <em class="username">Pafûncio</em></p>
-      </div>
-    </div>
-      <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
-      class: "product-img" %>
-      <div class="price">
-        <p>R$30,00</p>
-      </div>
-  </div>
-  <div class="card-product">
-    <div class="nav-card">
-      <div class="card-details">
-        <p class="product-name">Ração Pedigree</p>
-        <p class="from">from <em class="username">Pafûncio</em></p>
-      </div>
-    </div>
-      <%= image_tag  "https://www.petlove.com.br/images/products/223357/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_310484_1_20kg.jpg?1587403804",
-      class: "product-img" %>
-      <div class="price">
-        <p>R$30,00</p>
-      </div>
-  </div>
+    <% end %>
+  <% end %>
 </div>
